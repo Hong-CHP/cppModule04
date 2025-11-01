@@ -5,15 +5,15 @@
 #                                                     +:+ +:+         +:+      #
 #    By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/10/31 13:25:59 by hporta-c          #+#    #+#              #
-#    Updated: 2025/11/01 10:39:10 by hporta-c         ###   ########.fr        #
+#    Created: 2025/11/01 10:50:57 by hporta-c          #+#    #+#              #
+#    Updated: 2025/11/01 12:12:57 by hporta-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Animal
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -I. -std=c++98
-SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp 
+SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp 
 OBJS = $(SRCS:.cpp=.o)
 RM = rm -f
 

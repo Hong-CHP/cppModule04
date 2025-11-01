@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/31 13:55:22 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/01 10:03:30 by hporta-c         ###   ########.fr       */
+/*   Created: 2025/11/01 10:06:37 by hporta-c          #+#    #+#             */
+/*   Updated: 2025/11/01 10:42:05 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef	WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
 # include <iostream>
 
-class	Animal {
+class	WrongAnimal {
 	protected:
 		std::string type;
 	public:
-		Animal();
-		virtual void	makeSound() const;
+		WrongAnimal();
+		void	makeSound();
 		const std::string& getType() const;
-		virtual ~Animal();
+		virtual ~WrongAnimal();
 };
 
 #endif

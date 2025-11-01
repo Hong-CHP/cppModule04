@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/31 13:55:22 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/01 10:03:30 by hporta-c         ###   ########.fr       */
+/*   Created: 2025/11/01 09:09:39 by hporta-c          #+#    #+#             */
+/*   Updated: 2025/11/01 09:58:40 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef CAT_HPP
+# define CAT_HPP
 
-# include <iostream>
+# include "Animal.hpp"
 
-class	Animal {
-	protected:
-		std::string type;
+class Cat: public Animal
+{
 	public:
-		Animal();
+		Cat();
 		virtual void	makeSound() const;
-		const std::string& getType() const;
-		virtual ~Animal();
+		~Cat();
 };
 
 #endif

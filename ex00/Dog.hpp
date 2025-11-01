@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 14:38:01 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/10/31 15:43:47 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/01 09:58:49 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 class Dog: public Animal {
 	public:
 		Dog();
+		virtual void	makeSound() const;
 		~Dog();
 };
 

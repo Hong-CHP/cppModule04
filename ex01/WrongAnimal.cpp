@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/31 14:04:13 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/01 10:03:22 by hporta-c         ###   ########.fr       */
+/*   Created: 2025/11/01 10:13:50 by hporta-c          #+#    #+#             */
+/*   Updated: 2025/11/01 10:42:11 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-Animal::Animal() : type("Animal") {
-	std::cout << type << " : I construct Animal base class!" << std::endl;
+WrongAnimal::WrongAnimal() : type("WrongAnimal") {
+	std::cout << "**** " << type << " : test base clase contructor ****" << std::endl;
 }
 
-void	Animal::makeSound() const {
-	std::cout << "Animals wake up" << std::endl;
+void	WrongAnimal::makeSound() {
+	std::cout << "**** " << type << " : try to make noise ****" << std::endl;
 }
 
-const std::string& Animal::getType() const {
+const std::string& WrongAnimal::getType() const {
 	return (this->type);
 }
 
-Animal::~Animal() {
-	std::cout << "Animal: Deconstruct " << type << " base class!" << std::endl;
+WrongAnimal::~WrongAnimal() {
+	std::cout << "**** " << type << " test base class destroyed ****" << std::endl;
 }

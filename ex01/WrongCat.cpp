@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/31 13:55:22 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/01 10:03:30 by hporta-c         ###   ########.fr       */
+/*   Created: 2025/11/01 10:29:44 by hporta-c          #+#    #+#             */
+/*   Updated: 2025/11/01 10:42:23 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	ANIMAL_HPP
-# define ANIMAL_HPP
+#include "WrongCat.hpp"
 
-# include <iostream>
+WrongCat::WrongCat() {
+	type = "WrongCat";
+	std::cout << "**** " << type << " : test base clase contructor ****" << std::endl;
+}
 
-class	Animal {
-	protected:
-		std::string type;
-	public:
-		Animal();
-		virtual void	makeSound() const;
-		const std::string& getType() const;
-		virtual ~Animal();
-};
+void	WrongCat::makeSound() {
+	std::cout << "**** " << type << " : try to moew~~~~ ****" << std::endl;
+}
 
-#endif
+WrongCat::~WrongCat() {
+	std::cout << "**** " << type << " test base class destroyed ****" << std::endl;
+}

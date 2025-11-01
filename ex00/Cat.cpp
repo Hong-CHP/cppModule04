@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/31 13:55:22 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/01 10:03:30 by hporta-c         ###   ########.fr       */
+/*   Created: 2025/11/01 09:16:04 by hporta-c          #+#    #+#             */
+/*   Updated: 2025/11/01 09:59:01 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	ANIMAL_HPP
-# define ANIMAL_HPP
+#include "Cat.hpp"
 
-# include <iostream>
+Cat::Cat()
+{
+	type = "Cat";
+	std::cout << type <<" : Derived class is created!" <<std::endl;
+}
 
-class	Animal {
-	protected:
-		std::string type;
-	public:
-		Animal();
-		virtual void	makeSound() const;
-		const std::string& getType() const;
-		virtual ~Animal();
-};
+void	Cat::makeSound() const {
+	std::cout << "Meow..." << std::endl;
+}
 
-#endif
+Cat::~Cat()
+{
+	std::cout << type << " derived class is destroyed." << std::endl;
+}
