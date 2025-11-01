@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/01 10:51:34 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/01 15:54:30 by hporta-c         ###   ########.fr       */
+/*   Created: 2025/11/01 10:29:44 by hporta-c          #+#    #+#             */
+/*   Updated: 2025/11/01 10:42:23 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-# define BRAIN_HPP
+#include "WrongCat.hpp"
 
-# include <iostream>
+WrongCat::WrongCat() {
+	type = "WrongCat";
+	std::cout << "**** " << type << " : test base clase contructor ****" << std::endl;
+}
 
-class	Brain {
-	std::string ideas[100];
-	public:
-		Brain();
-		Brain(const Brain &other);
-		Brain&	operator=(const Brain &other);
-		~Brain();
-};
+void	WrongCat::makeSound() {
+	std::cout << "**** " << type << " : try to moew~~~~ ****" << std::endl;
+}
 
-#endif
+WrongCat::~WrongCat() {
+	std::cout << "**** " << type << " test base class destroyed ****" << std::endl;
+}

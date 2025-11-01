@@ -5,15 +5,15 @@
 #                                                     +:+ +:+         +:+      #
 #    By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/11/01 10:50:57 by hporta-c          #+#    #+#              #
-#    Updated: 2025/11/01 13:16:10 by hporta-c         ###   ########.fr        #
+#    Created: 2025/11/01 13:17:21 by hporta-c          #+#    #+#              #
+#    Updated: 2025/11/01 13:51:19 by hporta-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = AnimalBrain
+NAME = InterfaceRecap
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -I. -std=c++98
-SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp 
+SRCS = main.cpp AMateria.cpp Ice.cpp Cure.cpp 
 OBJS = $(SRCS:.cpp=.o)
 RM = rm -f
 
