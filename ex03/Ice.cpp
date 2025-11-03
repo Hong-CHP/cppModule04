@@ -6,14 +6,14 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 13:53:01 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/01 15:09:50 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/03 15:40:04 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
 
-Ice::Ice(std::string const &type): AMateria(type) {
-	std::cout << "Ice " << type << " constructor" << std::endl;
+Ice::Ice(): AMateria("ice") {
+	std::cout << "Default Ice constructor" << std::endl;
 }
 
 Ice::Ice(const Ice &other): AMateria(other) {
@@ -24,7 +24,7 @@ Ice::Ice(const Ice &other): AMateria(other) {
 Ice&	Ice::operator=(const Ice &other) {
 	if (this != &other)
 	{
-		// this->type = other.type;
+		this->type = other.type;
 		std::cout << "Ice assigned" << std::endl;
 	}
 	return (*this);
@@ -35,11 +35,10 @@ Ice::~Ice() {
 }
 
 Ice*	Ice::clone() const {
-	Ice *newIce = new Ice("new Ice");
+	Ice *newIce = new Ice(*this);
 	return (newIce);
 }
 
-void	Ice::use(ICharacter &target) const 
-{
-	std::cout << "* shoots an ice bolt at <name> *" << std::endl;
+void	Ice::use(ICharacter &target) const {
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 14:40:33 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/01 15:43:41 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/03 11:29:45 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,12 @@ Dog::~Dog()
 
 void	Dog::makeSound() const {
 	std::cout << "Barking..." << std::endl;
+}
+
+void	Dog::setIdea(int idx, std::string& idea) {
+	brain->setIdea(idx, idea);
+}
+
+std::string	Dog::getIdea(int idx) {
+	return (brain->getIdea(idx));
 }

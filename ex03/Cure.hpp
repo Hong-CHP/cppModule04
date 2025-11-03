@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 13:37:20 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/01 15:05:28 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/03 15:40:24 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class Cure: public AMateria
 {
 	public:
-		Cure(std::string const &type);
+		Cure();
 		Cure(const Cure &other);
 		Cure&	operator=(const Cure &other);
 		~Cure();

@@ -6,18 +6,21 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 13:52:20 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/01 15:03:49 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/03 15:34:17 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
 
+AMateria::AMateria() {
+	std::cout << "Default AMateria constructor" << std::endl;
+}
+
 AMateria::AMateria(std::string const &type): type(type) {
 	std::cout << "AMateria " << type  << " constructor" << std::endl;
 }
 
-AMateria::AMateria(const AMateria &other) {
-	this->type = other.type;
+AMateria::AMateria(const AMateria &other): type(other.type) {
 	std::cout << "AMateria copy constructor" << std::endl;
 }
 

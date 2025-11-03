@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 14:38:01 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/01 11:58:34 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/03 11:29:53 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@ class Dog: public Animal {
 		Dog&	operator=(const Dog &other);
 		virtual void	makeSound() const;
 		~Dog();
+
+		void	setIdea(int idx, std::string& idea);
+		std::string	getIdea(int idx);
 };
 
 #endif

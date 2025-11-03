@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 10:51:34 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/01 15:54:30 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/03 11:31:20 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@ class	Brain {
 		Brain(const Brain &other);
 		Brain&	operator=(const Brain &other);
 		~Brain();
+
+		void	setIdea(int idx, std::string& idea);
+		std::string	getIdea(int idx);
 };
 
 #endif

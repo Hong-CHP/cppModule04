@@ -6,14 +6,14 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 13:53:53 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/01 15:09:41 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/03 15:41:22 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
 
-Cure::Cure(std::string const &type): AMateria(type) {
-	std::cout << "Cure  " << type << " constructor" << std::endl;
+Cure::Cure(): AMateria("cure") {
+	std::cout << "Default Cure constructor" << std::endl;
 }
 
 Cure::Cure(const Cure &other): AMateria(other) {
@@ -24,7 +24,7 @@ Cure::Cure(const Cure &other): AMateria(other) {
 Cure&	Cure::operator=(const Cure &other) {
 	if (this != &other)
 	{
-		// this->type = other.type;
+		this->type = other.type;
 		std::cout << "Cure assigned" << std::endl;
 	}
 	return (*this);
@@ -35,11 +35,11 @@ Cure::~Cure() {
 }
 
 Cure*	Cure::clone() const {
-	Cure *newCure = new Cure("new Cure");
+	Cure *newCure = new Cure(*this);
 	return (newCure);
 }
 
 void	Cure::use(ICharacter &target) const
 {
-	std::cout << "* heals <name>'s wounds *" << std::endl;
+	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }

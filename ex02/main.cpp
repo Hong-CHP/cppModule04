@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 13:55:06 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/01 15:57:09 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/03 11:37:22 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,25 +19,27 @@
 int main()
 {
 	{
-		Animal	*Meta = new Animal();
-		Animal	littleMeta(*Meta);
-		Animal	bigMeta;
-		bigMeta = *Meta;
-		Animal	*moyenMeta = new Animal(*Meta);
-		delete Meta;
-		delete moyenMeta;
+		// Animal	*Meta = new Animal();
+		// Animal	littleMeta(*Meta);
+		// Animal	bigMeta;
+		// bigMeta = *Meta;
+		// Animal	*moyenMeta = new Animal(*Meta);
+		// delete Meta;
+		// delete moyenMeta;
 		std::cout << "*****************" << std::endl;
-		std::cout << "*****************" << std::endl;
-		
+		std::cout << "********ORIGIN BASE*********" << std::endl;
+		std::string idea = "thinking";
 		Dog *D = new Dog();
 		D->makeSound();
-		std::cout << "*****************" << std::endl;
+		D->setIdea(0, idea);
+		std::cout << "********SMALL DOG*********" << std::endl;
 		Dog	smallDog(*D);
 		smallDog.makeSound();
-		std::cout << "*****************" << std::endl;
+		std::cout << "Hey!!! I get a new idea : " << smallDog.getIdea(0) << std::endl;
+		std::cout << "*******BIG DOG**********" << std::endl;
 		Dog bigDog;
 		bigDog = *D;
-		std::cout << "*****************" << std::endl;
+		std::cout << "********MEDIAN DOG*********" << std::endl;
 		Dog *medianDog = new Dog(*D);
 		medianDog->makeSound();
 		std::cout << "*****************" << std::endl;
