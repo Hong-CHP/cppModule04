@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 13:55:06 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/01 15:50:29 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/20 15:18:58 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,36 +18,49 @@
 
 int main()
 {
+	std::string count[100];
+	for (int i = 0; i < 100; i++)
+		count[i] = "I love count : " + i + '0';
 	{
-		// Animal	*Meta = new Animal();
-		// Animal	littleMeta(*Meta);
-		// Animal	bigMeta;
-		// bigMeta = *Meta;
-		// Animal	*moyenMeta = new Animal(*Meta);
-		// delete Meta;
-		// delete moyenMeta;
-		// std::cout << "*****************" << std::endl;
-		// std::cout << "*****************" << std::endl;
-		
-		// Dog *D = new Dog();
-		// D->makeSound();
-		// std::cout << "*****************" << std::endl;
-		// Dog	smallDog(*D);
-		// smallDog.makeSound();
-		// std::cout << "*****************" << std::endl;
-		// Dog bigDog;
-		// bigDog = *D;
-		// std::cout << "*****************" << std::endl;
-		// Dog *medianDog = new Dog(*D);
-		// medianDog->makeSound();
-		// std::cout << "*****************" << std::endl;
-		
-		// std::cout << "this is delete from heap: ";
-		// delete medianDog;
-		// std::cout << "this is delete from heap: ";
-		// delete D;
-		
+		std::cout << "********BASE ANIMAL*********" << std::endl;
+		Animal	*Meta = new Animal("Animal");
+		Animal	little(*Meta);
+		Animal	big;
+		big = *Meta;
+		Meta->makeSound();
+		little.makeSound();
+		big.makeSound();
+		Animal	*middle = new Animal(*Meta);
+		middle->makeSound();
+		delete Meta;
+		delete middle;
+	}
+	{
+		std::cout << "********DOG*********" << std::endl;
+		Dog *D = new Dog();
+		D->makeSound();
+		D->getBrain().setIdeas(0, "eat");
+		D->getBrain().setIdeas(1, "play");
+		std::cout << D->getBrain().getIdeas(0) << std::endl;
+		std::cout << D->getBrain().getIdeas(1) << std::endl;
 		std::cout << "*****************" << std::endl;
+		Dog *median = new Dog(*D);
+		median->makeSound();
+		std::cout << median->getBrain().getIdeas(0) << std::endl;
+		std::cout << median->getBrain().getIdeas(1) << std::endl;
+		std::cout << "*****************" << std::endl;
+		Dog *little(D);
+		little->makeSound();
+		std::cout << little->getBrain().getIdeas(0) << std::endl;
+		std::cout << little->getBrain().getIdeas(1) << std::endl;
+		std::cout << "*****************" << std::endl;
+		std::cout << "this is delete from heap: ";
+		delete median;
+		std::cout << "this is delete from heap: ";
+		delete D;
+	}
+	{		
+		std::cout << "*******ARRAY**********" << std::endl;
 		
 		Animal *animals[6];
 		for (int i = 0; i < 6; i++)

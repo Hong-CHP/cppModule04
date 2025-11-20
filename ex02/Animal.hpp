@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 13:55:22 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/01 15:56:36 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/20 15:20:29 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class	Animal {
 		std::string type;
 	public:
 		Animal();
+		Animal(std::string itype);
 		Animal(const Animal &other);
 		Animal&	operator=(const Animal &other);
 		virtual ~Animal();

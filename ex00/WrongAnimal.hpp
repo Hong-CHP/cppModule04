@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 10:06:37 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/01 10:42:05 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/20 13:51:45 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,13 @@ class	WrongAnimal {
 		std::string type;
 	public:
 		WrongAnimal();
+		WrongAnimal(std::string itype);
+		WrongAnimal(const WrongAnimal& other);
+		WrongAnimal&	operator=(const WrongAnimal& other);
+		virtual ~WrongAnimal();
+		
 		void	makeSound();
 		const std::string& getType() const;
-		virtual ~WrongAnimal();
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 09:09:39 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/01 09:58:40 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/20 13:35:40 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,12 @@ class Cat: public Animal
 {
 	public:
 		Cat();
-		virtual void	makeSound() const;
+		Cat(std::string itype);
+		Cat(const Cat& other);
+		Cat& operator=(const Cat& other);
 		~Cat();
+		
+		virtual void	makeSound() const;
 };
 
 #endif

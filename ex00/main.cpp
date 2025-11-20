@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 13:55:06 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/01 10:38:38 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/20 14:00:10 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,40 @@
 
 int main()
 {
-	{	
-		Animal *meta = new Animal();
+	{
+		std::cout << "***********ANIMAL BASE**************" << std::endl;
+		Animal a("Animals");
+		Animal a1(a);
+		Animal a2;
+		a2 = a1;
+		a.makeSound();
+		a1.makeSound();
+		a2.makeSound();
+	}
+	{
+		std::cout << "***********DOG*************" << std::endl;
+		Animal a("Animals");
+		Dog d;
+		Dog d1(d);
+		Dog d2;
+		d2 = d1;
+		a.makeSound();
+		d1.makeSound();
+		d2.makeSound();
+	}
+	{
+		std::cout << "***********CAT*************" << std::endl;
+		Animal a("Animals");
+		Cat c;
+		Cat c1(c);
+		Cat c2 = c1;
+		a.makeSound();
+		c1.makeSound();
+		c2.makeSound();
+	}
+	{
+		std::cout << "***********ANIMAL PTR*************" << std::endl;	
+		Animal *meta = new Animal("Animal");
 		Animal *susu = new Dog();
 		Animal *meme = new Cat();
 		std::cout << meta->getType() << std::endl;
@@ -28,19 +60,20 @@ int main()
 		meta->makeSound();
 		susu->makeSound();
 		meme->makeSound();
-		delete meta;
 		delete susu;
 		delete meme;
+		delete meta;
 	}
 	{
-		WrongAnimal *WrongMeta = new WrongAnimal();
+		std::cout << "***********WRONGANIMAL WRONGCAT*************" << std::endl;	
+		WrongAnimal *WrongMeta = new WrongAnimal("WrongAnimal");
 		WrongAnimal *WrongMeme = new WrongCat();
 		std::cout << WrongMeta->getType() << std::endl;
 		std::cout << WrongMeme->getType() << std::endl;
 		WrongMeta->makeSound();
 		WrongMeme->makeSound();
-		delete WrongMeta;
 		delete WrongMeme;
+		delete WrongMeta;
 		return (0);
 	}
 }
