@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 13:53:53 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/03 15:41:22 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/20 16:12:51 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,20 @@ Cure::Cure(): AMateria("cure") {
 	std::cout << "Default Cure constructor" << std::endl;
 }
 
+Cure::Cure(std::string const &type): AMateria("cure") {
+	(void)type;
+	std::cout << "Default Cure constructor" << std::endl;
+}
+
 Cure::Cure(const Cure &other): AMateria(other) {
-	this->type = other.type;
+	this->_type = other._type;
 	std::cout << "Cure copy constructor" << std::endl;
 }
 
 Cure&	Cure::operator=(const Cure &other) {
 	if (this != &other)
 	{
-		this->type = other.type;
+		this->_type = other._type;
 		std::cout << "Cure assigned" << std::endl;
 	}
 	return (*this);

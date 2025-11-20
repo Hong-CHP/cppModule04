@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 14:40:33 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/20 15:24:32 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/20 16:36:42 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,11 @@ Dog&	Dog::operator=(const Dog &other) {
 
 Dog::~Dog()
 {
-	delete brain;
+	if (brain != NULL)
+	{
+		delete brain;
+		brain = NULL;
+	}
 	std::cout << type << " : I have burn my brain." << std::endl;
 	std::cout << type << " derived class is destroyed." << std::endl;
 }

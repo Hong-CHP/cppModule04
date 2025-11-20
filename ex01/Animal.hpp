@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 13:55:22 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/20 14:02:19 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/20 16:34:40 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ class	Animal {
 
 		virtual void	makeSound() const;
 		const std::string& getType() const;
-	};
+};
 
 #endif

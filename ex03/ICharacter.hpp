@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 13:38:16 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/03 15:55:42 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/20 16:09:19 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ class AMateria;
 class ICharacter
 {
 	public:
-		virtual ~ICharacter() {
-			std::cout << "ICharacter Interface is destroyed." << std::endl;
-		}
+		virtual ~ICharacter() {};
 		virtual std::string const & getName() const = 0;
 		virtual void equip(AMateria* m) = 0;
 		virtual void unequip(int idx) = 0;

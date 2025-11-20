@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 13:55:06 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/20 15:18:58 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/20 16:22:39 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,10 @@
 
 int main()
 {
-	std::string count[100];
-	for (int i = 0; i < 100; i++)
-		count[i] = "I love count : " + i + '0';
+	Dog basic;
+	{
+    	Dog tmp = basic;
+	}
 	{
 		std::cout << "********BASE ANIMAL*********" << std::endl;
 		Animal	*Meta = new Animal("Animal");

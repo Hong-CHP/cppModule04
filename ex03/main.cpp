@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 13:17:18 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/03 16:55:54 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/20 16:15:20 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int main()
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
 	me->unequip(1);
-	tmp = src->createMateria("lol");
+	tmp = src->createMateria("noexitant");
 	me->equip(tmp);
 	std::cout << "****************************************" << std::endl;
 	ICharacter* bob = new Character("bob");

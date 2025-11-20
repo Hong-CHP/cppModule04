@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 14:17:56 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/03 16:59:18 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/20 16:11:00 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,14 @@ MateriaSource::MateriaSource(const MateriaSource &other) {
 	std::cout << "Copy MateriaSource constructor called" << std::endl;
 	for (int i = 0; i < 4; i++)
 		this->learn[i] = other.learn[i]->clone();
-	*this = other; 
+	this->count = other.count; 
 }
 
 MateriaSource&	MateriaSource::operator=(const MateriaSource &other) {
 	std::cout << "MateriaSource assigned" << std::endl;
 	if (this != &other)
 	{
+		this->count = other.count;
 		for (int i = 0; i < 4; i++)
 			this->learn[i] = other.learn[i]->clone();
 	}

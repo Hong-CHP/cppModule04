@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 09:16:04 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/20 15:27:42 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/20 16:36:50 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,11 @@ Cat&	Cat::operator=(const Cat &other) {
 
 Cat::~Cat()
 {
-	delete brain;
-	std::cout << type << " : I have burn my brain." << std::endl;
+	if (brain != NULL)
+	{
+		delete brain;
+		brain = NULL;
+	}	std::cout << type << " : I have burn my brain." << std::endl;
 	std::cout << type << " derived class is destroyed." << std::endl;
 }
 

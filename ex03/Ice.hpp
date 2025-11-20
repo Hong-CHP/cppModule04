@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 13:26:43 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/03 15:36:51 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/20 15:54:45 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class Ice: public AMateria
 {
 	public:
 		Ice();
+		Ice(std::string const &type);
 		Ice(const Ice &other);
 		Ice&	operator=(const Ice &other);
 		~Ice();

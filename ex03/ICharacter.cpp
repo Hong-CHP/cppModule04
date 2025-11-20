@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 13:56:20 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/03 16:50:06 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/20 16:09:10 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ Character::Character(std::string name): name(name) {
 
 Character::Character(const Character &other) {
 	std::cout << "Copy character constructor called" << std::endl;
+	this->name = other.name;
 	for (int i = 0; i < 4; i++)
 	{
 		if (this->inventory[i] != NULL)
@@ -34,14 +35,18 @@ Character::Character(const Character &other) {
 }
 
 Character&	Character::operator=(const Character &other) {
-	std::cout << "Character assigned called" << std::endl;
-	for (int i = 0; i < 4; i++)
+	if (this != &other)
 	{
-		if (this->inventory[i] != NULL)
-			delete inventory[i];
-		this->inventory[i] = other.inventory[i]->clone();
-		this->destockage[i] = NULL;
+		this->name = other.name;
+		for (int i = 0; i < 4; i++)
+		{
+			if (this->inventory[i] != NULL)
+				delete inventory[i];
+			this->inventory[i] = other.inventory[i]->clone();
+			this->destockage[i] = NULL;
+		}
 	}
+	std::cout << "Character assigned called" << std::endl;
 	return (*this);
 }
 

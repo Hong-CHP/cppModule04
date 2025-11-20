@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 13:18:59 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/03 14:39:32 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/20 15:54:00 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class AMateria
 {
 	protected:
-		std::string type; 
+		std::string _type; 
 	public:
 		AMateria();
 		AMateria(std::string const &type);
